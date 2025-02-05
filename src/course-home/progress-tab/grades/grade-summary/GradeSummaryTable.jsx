@@ -97,27 +97,27 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
         itemCount={gradeSummaryData.length}
         columns={[
           {
-            Header: `${intl.formatMessage(messages.assignmentType)}`,
+            Header: `Assignment type`,
             accessor: 'type',
             Cell: ({ value }) => getAssignmentTypeCell(value),
             headerClassName: 'h5 mb-0',
           },
           {
-            Header: `${intl.formatMessage(messages.weight)}`,
+            Header: `Weight`,
             accessor: 'weight',
             headerClassName: 'justify-content-end h5 mb-0',
             Cell: ({ value }) => getCell(value.locked, value.weight),
             cellClassName: 'text-right small',
           },
           {
-            Header: `${intl.formatMessage(messages.grade)}`,
+            Header: `Grade`,
             accessor: 'grade',
             headerClassName: 'justify-content-end h5 mb-0',
             Cell: ({ value }) => getCell(value.locked, value.grade),
             cellClassName: 'text-right small',
           },
           {
-            Header: `${intl.formatMessage(messages.weightedGrade)}`,
+            Header: `Weighted grade`,
             accessor: 'weightedGrade',
             headerClassName: 'justify-content-end h5 mb-0 text-right',
             Cell: ({ value }) => getCell(value.locked, value.weightedGrade),
