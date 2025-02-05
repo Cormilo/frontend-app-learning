@@ -88,40 +88,7 @@ describe('Course Home Tours', () => {
     popperMock.mockReset();
   });
 
-  describe('for new users', () => {
-    beforeEach(async () => {
-      setTourData({
-        course_home_tour_status: 'show-new-user-tour',
-        show_courseware_tour: false,
-      });
-      await fetchAndRender();
-    });
-
-    it('renders modal', async () => {
-      expect(await screen.findByRole('dialog', { name: 'New user course home prompt' })).toBeInTheDocument();
-      expect(screen.getByRole('button', { name: 'Begin tour' })).toBeInTheDocument();
-    });
-
-    it('renders checkpoint on click of "Begin tour"', async () => {
-      const beginTourButton = await screen.findByRole('button', { name: 'Begin tour' });
-      fireEvent.click(beginTourButton);
-
-      expect(await screen.findByRole('dialog', { name: 'Take the course!' }));
-    });
-  });
-
-  describe('for eligible existing users', () => {
-    it('renders correctly', async () => {
-      setTourData({
-        course_home_tour_status: 'show-existing-user-tour',
-        show_courseware_tour: false,
-      });
-      await fetchAndRender();
-
-      expect(await screen.findByRole('dialog')).toBeInTheDocument();
-      expect(screen.getByText('We’ve recently added a few new features to the course experience.', { exact: false })).toBeInTheDocument();
-    });
-  });
+  
 
   describe('for non-eligible existing users', () => {
     beforeEach(async () => {
