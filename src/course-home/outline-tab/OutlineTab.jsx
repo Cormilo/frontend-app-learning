@@ -183,9 +183,7 @@ const OutlineTab = ({ intl }) => {
             </>
           )}
         </div>
-        {rootCourseId && (
-          ' '
-        )}
+        
       </div>
     </>
   );
