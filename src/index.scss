@@ -444,6 +444,16 @@
   height: 56px !important;
 }
 
+.btn-brand {
+  background-color: #ff0000;
+  color: #fff;
+}
+.btn-brand:hover {
+  background-color: #fff;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";
