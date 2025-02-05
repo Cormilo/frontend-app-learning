@@ -105,7 +105,7 @@ const Section = ({
           <IconButton
             alt={intl.formatMessage(genericMessages.close)}
             icon={faMinus}
-            onClick={() => { setOpen(false); }}
+            onClick={() => { setOpen(true); }}
             size="sm"
           />
         )}
