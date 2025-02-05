@@ -18,6 +18,8 @@ const CourseTabsNavigation = ({
       <div className="container-xl">
         <div className="nav-bar">
           <div className="nav-menu">
+          <pre>{JSON.stringify(tabs, null, 2)}</pre>
+
             <Tabs
               className="nav-underline-tabs"
               aria-label={intl.formatMessage(messages.courseMaterial)}
