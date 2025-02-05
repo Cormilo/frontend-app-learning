@@ -205,15 +205,7 @@ const CourseCelebration = ({ intl }) => {
               description="Body text when the learner needs to upgrade to earn a certifcate and they have passed the course"
             />
             <br />
-            {getConfig().SUPPORT_URL_VERIFIED_CERTIFICATE && (
-              <Hyperlink
-                className="text-gray-700"
-                style={{ textDecoration: 'underline' }}
-                destination={getConfig().SUPPORT_URL_VERIFIED_CERTIFICATE}
-              >
-                {intl.formatMessage(messages.verifiedCertificateSupportLink)}
-              </Hyperlink>
-            )}
+            
           </p>
         );
         buttonText = intl.formatMessage(messages.upgradeButton);
