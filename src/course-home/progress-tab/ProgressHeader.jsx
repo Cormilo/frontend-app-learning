@@ -30,7 +30,7 @@ const ProgressHeader = ({ intl }) => {
       <h1>Your progress</h1>
       {administrator && studioUrl && (
       <Button variant="outline-primary" size="sm" className="align-self-center" href={studioUrl}>
-        {intl.formatMessage(messages.studioLink)}
+        View grading in Studio
       </Button>
       )}
     </div>
