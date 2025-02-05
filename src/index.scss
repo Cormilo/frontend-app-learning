@@ -445,13 +445,13 @@
 }
 
 .btn-brand {
-  background-color: #ff0000;
-  color: #fff;
+  background-color: #ff0000 !important;
+  color: #fff !important;
 }
 .btn-brand:hover {
-  background-color: #fff;
-  border: 1px solid #ff0000;
-  color: #ff0000;
+  background-color: #fff !important;
+  border: 1px solid #ff0000 !important;
+  color: #ff0000 !important;
 }
 
 // Import component-specific sass files
