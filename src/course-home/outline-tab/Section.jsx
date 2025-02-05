@@ -32,14 +32,14 @@ const Section = ({
     },
   } = useModel('outline', courseId);
 
-  const [open, setOpen] = useState(defaultOpen);
+  const [open, setOpen] = useState(expand);
 
   useEffect(() => {
     setOpen(expand);
   }, [expand]);
 
   useEffect(() => {
-    setOpen(defaultOpen);
+    setOpen(expand);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
