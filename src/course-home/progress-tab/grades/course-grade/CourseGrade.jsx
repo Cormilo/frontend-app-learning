@@ -35,12 +35,11 @@ const CourseGrade = ({ intl }) => {
       <div className={applyLockedOverlay} aria-hidden={gradesFeatureIsFullyLocked}>
         <div className="row w-100 m-0 p-4">
           <div className="col-12 col-sm-6 p-0 pr-sm-5.5">
-            <h2>{creditCourseRequirements
-              ? intl.formatMessage(messages.gradesAndCredit)
-              : intl.formatMessage(messages.grades)}
+            <h2>
+              Grades
             </h2>
             <p className="small">
-              {intl.formatMessage(messages.courseGradeBody)}
+              This represents your weighted grade against the grade needed to pass this course.
             </p>
           </div>
           <GradeBar passingGrade={passingGrade} />
