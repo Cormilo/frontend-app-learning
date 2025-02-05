@@ -87,41 +87,7 @@ const Section = ({
 
   return (
     <li>
-      <Collapsible
-        className="mb-2"
-        styling="card-lg"
-        title={sectionTitle}
-        open={useState(defaultOpen)}
-        onToggle={() => { setOpen(!open); }}
-        iconWhenClosed={(
-          <IconButton
-            alt={intl.formatMessage(messages.openSection)}
-            icon={faPlus}
-            onClick={() => { setOpen(true); }}
-            size="sm"
-          />
-        )}
-        iconWhenOpen={(
-          <IconButton
-            alt={intl.formatMessage(genericMessages.close)}
-            icon={faMinus}
-            onClick={() => { setOpen(false); }}
-            size="sm"
-          />
-        )}
-      >
-        <ol className="list-unstyled">
-          {sequenceIds.map((sequenceId, index) => (
-            <SequenceLink
-              key={sequenceId}
-              id={sequenceId}
-              courseId={courseId}
-              sequence={sequences[sequenceId]}
-              first={index === 0}
-            />
-          ))}
-        </ol>
-      </Collapsible>
+      
     </li>
   );
 };
