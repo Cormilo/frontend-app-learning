@@ -18,13 +18,14 @@ const CourseTabsNavigation = ({
       <div className="container-xl">
         <div className="nav-bar">
           <div className="nav-menu">
-          <pre>{JSON.stringify(tabs, null, 2)}</pre>
 
             <Tabs
               className="nav-underline-tabs"
               aria-label={intl.formatMessage(messages.courseMaterial)}
             >
-              {tabs.map(({ url, title, slug }) => (
+              {tabs
+                .filter(({ slug }) => slug !== 'dates')
+                .map(({ url, title, slug }) => (
                 <a
                   key={slug}
                   className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
