@@ -30,7 +30,7 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
         overlay={(
           <Popover>
             <Popover.Content className="small text-dark-700">
-              {intl.formatMessage(messages.gradeSummaryTooltipBody)}
+            Your course assignment's weight is determined by your instructor. By multiplying your grade by the weight for that assignment type, your weighted grade is calculated. Your weighted grade is what's used to determine if you pass the course.
             </Popover.Content>
           </Popover>
         )}
