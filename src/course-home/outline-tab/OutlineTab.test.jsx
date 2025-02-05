@@ -150,7 +150,7 @@ describe('Outline Tab', () => {
 
       // Section initially renders collapsed
       const collapsedSectionNode = screen.getByRole('button', { name: /section/ });
-      expect(collapsedSectionNode).toHaveAttribute('aria-expanded', 'true');
+      expect(collapsedSectionNode).toHaveAttribute('aria-expanded', 'false');
 
       // Click to expand section
       userEvent.click(expandButton);
@@ -158,7 +158,7 @@ describe('Outline Tab', () => {
 
       // Click to collapse section
       userEvent.click(expandButton);
-      await waitFor(() => expect(collapsedSectionNode).toHaveAttribute('aria-expanded', 'true'));
+      await waitFor(() => expect(collapsedSectionNode).toHaveAttribute('aria-expanded', 'false'));
     });
 
     it('displays correct icon for complete assignment', async () => {
