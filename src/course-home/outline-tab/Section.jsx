@@ -91,7 +91,7 @@ const Section = ({
         className="mb-2"
         styling="card-lg"
         title={sectionTitle}
-        open={open}
+        open={useState(defaultOpen)}
         onToggle={() => { setOpen(!open); }}
         iconWhenClosed={(
           <IconButton
