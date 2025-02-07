@@ -23,29 +23,7 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
   return (
     <div className="row w-100 m-0 align-items-center">
       <h3 className="h4 mb-3 mr-1">Grade summary</h3>
-      <OverlayTrigger
-        trigger="click"
-        placement="top"
-        show={showTooltip}
-        overlay={(
-          <Popover>
-            <Popover.Content className="small text-dark-700">
-            Your course assignment's weight is determined by your instructor. By multiplying your grade by the weight for that assignment type, your weighted grade is calculated. Your weighted grade is what's used to determine if you pass the course.
-            </Popover.Content>
-          </Popover>
-        )}
-      >
-        <IconButton
-          onClick={() => { setShowTooltip(!showTooltip); }}
-          onBlur={() => { setShowTooltip(false); }}
-          alt={intl.formatMessage(messages.gradeSummaryTooltipAlt)}
-          src={InfoOutline}
-          iconAs={Icon}
-          className="mb-3"
-          size="sm"
-          disabled={gradesFeatureIsFullyLocked}
-        />
-      </OverlayTrigger>
+      
       {!gradesFeatureIsFullyLocked && allOfSomeAssignmentTypeIsLocked && (
         <div className="mb-3 small ml-0 d-inline">
           <Icon className="mr-1 mt-1 d-inline-flex" style={{ height: '1rem', width: '1rem' }} src={Blocked} data-testid="blocked-icon" />
