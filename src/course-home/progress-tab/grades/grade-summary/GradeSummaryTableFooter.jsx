@@ -27,7 +27,7 @@ const GradeSummaryTableFooter = ({ intl }) => {
   const isLocaleRtl = isRtl(getLocale());
 
   return (
-    <DataTable.TableFooter state={{ backgroundColor: '#BCCBDD' }}>
+    <DataTable.TableFooter style={{ backgroundColor: '#BCCBDD' }}>
       <div className="row w-100 m-0">
         <div id="weighted-grade-summary" className="col-8 p-0 small">Your current weighted grade summary</div>
         <div data-testid="gradeSummaryFooterTotalWeightedGrade" aria-labelledby="weighted-grade-summary" className="col-4 p-0 text-right font-weight-bold small">{totalGrade}{isLocaleRtl && '\u200f'}%</div>
