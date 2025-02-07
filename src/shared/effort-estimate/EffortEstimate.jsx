@@ -29,15 +29,16 @@ const EffortEstimate = (props) => {
   let content = null;
 
   if (effortTime && effortActivities) {
+    let activitiesText;
     if (effortActivities === 1) {
-      activities = "1 case";
+      activitiesText  = "1 case";
     } else {
-      activities = `${effortActivities} cases`;
+      activitiesText  = `${effortActivities} cases`;
     }
     content = (
       <FormattedMessage
         id="learning.effortEstimation.combinedEstimate"
-        defaultMessage="{minutes} + {activities}"
+        defaultMessage="{minutes} + {activitiesText}"
         description="You can likely leave this alone, unless you want to use a full width plus or similar change"
         values={{ activities, minutes }}
       />
