@@ -454,6 +454,10 @@
   color: #ff0000 !important;
 }
 
+.buttom-futter-of-grade {
+  background-color: #BCCBDD !important
+}
+
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";
