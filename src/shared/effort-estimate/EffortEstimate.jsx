@@ -32,7 +32,7 @@ const EffortEstimate = (props) => {
     if (effortActivities == 1) {
       activities = "1 case";
     } else {
-      activities = String(effortActivities) + "cases";
+      activities = "{effortActivities} cases";
     }
     content = (
       <FormattedMessage
