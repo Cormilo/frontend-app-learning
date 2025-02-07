@@ -102,10 +102,10 @@ function GetCourseExitNavigation(courseId, intl) {
   let exitText;
   switch (exitMode) {
     case COURSE_EXIT_MODES.celebration:
-      exitText = intl.formatMessage(messages.nextButtonComplete);
+      exitText = "Next";
       break;
     case COURSE_EXIT_MODES.nonPassing:
-      exitText = intl.formatMessage(messages.nextButtonEnd);
+      exitText = "Next";
       break;
     default:
       exitText = null;

@@ -89,14 +89,14 @@ const SequenceNavigation = ({
         as={disabled ? undefined : Link}
         to={disabled ? undefined : previousLink}
       >
-        {shouldDisplayNotificationTriggerInSequence ? null : intl.formatMessage(messages.previousButton)}
+        {shouldDisplayNotificationTriggerInSequence ? null : Previous}
       </Button>
     );
   };
 
   const renderNextButton = () => {
     const { exitActive, exitText } = GetCourseExitNavigation(courseId, intl);
-    const buttonText = (isLastUnit && exitText) ? exitText : intl.formatMessage(messages.nextButton);
+    const buttonText = (isLastUnit && exitText) ? exitText : "Next";
     const disabled = isLastUnit && !exitActive;
     const nextArrow = isRtl(getLocale()) ? ChevronLeft : ChevronRight;
 
