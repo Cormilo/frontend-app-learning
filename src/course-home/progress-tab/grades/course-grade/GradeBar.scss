@@ -44,9 +44,9 @@
 }
 
 #non-passing-grade-tooltip {
-  background: $accent-b;
+  background: #ff0000;
 
   .arrow::after {
-    border-top-color: $accent-b;
+    border-top-color: #ff0000;
   }
 }
