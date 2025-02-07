@@ -22,8 +22,7 @@ const EffortEstimate = (props) => {
   const minutesFull = intl.formatMessage(messages.minutesFull, { minuteCount });
   const minutes = (
     <>
-      <span aria-hidden="true">{minutesAbbreviated}</span>
-      <span className="sr-only">{minutesFull}</span>
+      <span>training pages</span>
     </>
   );
   const activities = intl.formatMessage(messages.activities, { activityCount: effortActivities });

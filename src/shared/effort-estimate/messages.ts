@@ -3,7 +3,7 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   activities: {
     id: 'learning.effortEstimation.activities',
-    defaultMessage: '{activityCount, plural, one {# activity} other {# activities}}',
+    defaultMessage: '{activityCount, plural, one {# case} other {# cases}}',
   },
   minutesAbbreviated: {
     id: 'learning.effortEstimation.minutesAbbreviated',
