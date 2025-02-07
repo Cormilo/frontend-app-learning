@@ -36,10 +36,10 @@
 }
 
 #passing-grade-tooltip {
-  background: #BCCBDD;
+  background: #BCCBDD !important;
 
   .arrow::after {
-    border-top-color: #BCCBDD;
+    border-top-color: #BCCBDD !important;
   }
 }
 
