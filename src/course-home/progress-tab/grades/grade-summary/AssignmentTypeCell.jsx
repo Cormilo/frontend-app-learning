@@ -27,16 +27,7 @@ const AssignmentTypeCell = ({
         {assignmentType}&nbsp;
         {footnoteId && footnoteMarker && (
           <sup>
-            <a
-              id={`${footnoteId}-ref`}
-              className="muted-link"
-              href={`#${footnoteId}-footnote`}
-              aria-describedby="grade-summary-footnote-label"
-              tabIndex={gradesFeatureIsFullyLocked ? '-1' : '0'}
-              aria-labelledby={`assignmentTypeBlockedIcon${assignmentType}`}
-            >
-              {footnoteMarker}
-            </a>
+            
           </sup>
         )}
       </div>
