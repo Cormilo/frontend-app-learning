@@ -290,8 +290,7 @@
   margin-right: auto;
 
   @media (min-width: map-get($grid-breakpoints, "sm")) {
-    padding-left: $grid-gutter-width;
-    padding-right: $grid-gutter-width;
+
   }
 
   @media (min-width: 830px) {
