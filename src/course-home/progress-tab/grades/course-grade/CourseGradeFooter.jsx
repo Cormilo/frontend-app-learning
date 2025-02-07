@@ -53,7 +53,7 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
     : <Icon src={WarningFilled} className="d-inline-flex align-bottom" />;
 
   return (
-    <div className={`row w-100 m-0 px-4 py-3 py-md-4 rounded-bottom ${isPassing ? 'bg-success-100' : 'bg-warning-100'}`}
+    <div className={`row w-100 m-0 px-4 py-3 py-md-4 rounded-bottom ${isPassing}`}
     style={{ backgroundColor: '#BCCBDD' }}
     >
       <div className="col-auto p-0">
