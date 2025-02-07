@@ -29,10 +29,10 @@ const EffortEstimate = (props) => {
   let content = null;
 
   if (effortTime && effortActivities) {
-    if (effortActivities == 1) {
+    if (effortActivities === 1) {
       activities = "1 case";
     } else {
-      activities = "{effortActivities} cases";
+      activities = `${effortActivities} cases`;
     }
     content = (
       <FormattedMessage
