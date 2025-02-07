@@ -30,7 +30,7 @@ const EffortEstimate = (props) => {
 
   if (effortTime && effortActivities) {
     let activitiesText;
-    if (effortActivities === 1) {
+    if (effortActivities == 1) {
       activitiesText  = "1 case";
     } else {
       activitiesText  = `${effortActivities} cases`;
@@ -40,7 +40,7 @@ const EffortEstimate = (props) => {
         id="learning.effortEstimation.combinedEstimate"
         defaultMessage="{minutes} + {activitiesText}"
         description="You can likely leave this alone, unless you want to use a full width plus or similar change"
-        values={{ activities, minutes }}
+        values={{ activitiesText, minutes }}
       />
     );
   } else if (effortTime) {
