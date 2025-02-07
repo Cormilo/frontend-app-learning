@@ -4,16 +4,16 @@
   }
 
   .grade-bar__base {
-    fill: $light-300;
+    fill: #BCCBDD;
   }
 
   .grade-bar__divider {
-    fill: $primary-500;
+    fill: #ff0000;
     width: 1px;
   }
 
   .grade-bar--passing {
-    fill: $primary-500;
+    fill: black;
   }
 
   .grade-bar--current-passing {
