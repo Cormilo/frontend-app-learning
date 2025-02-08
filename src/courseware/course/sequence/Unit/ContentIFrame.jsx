@@ -99,6 +99,7 @@ const ContentIFrame = ({
       {shouldShowContent && (
         <div className="unit-iframe-wrapper">
           <iframe title={title} {...contentIFrameProps} data-testid={testIDs.contentIFrame} />
+          <script>console.log(contentIFrameProps);</script>
         </div>
       )}
       {modalOptions.isOpen && (modalOptions.isFullscreen
