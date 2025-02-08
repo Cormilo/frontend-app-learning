@@ -108,10 +108,7 @@ const CourseLicense = ({
   intl,
 }) => {
   const renderAllRightsReservedLicense = () => (
-    <div className="text-gray-500">
-      <FontAwesomeIcon aria-hidden="true" className="mr-1" icon={faCopyright} />
-      {intl.formatMessage(messages['learn.course.license.allRightsReserved.text'])}
-    </div>
+    ' '
   );
 
   const renderCreativeCommonsLicense = (activeCreativeCommonsLicenseTags, version) => (
