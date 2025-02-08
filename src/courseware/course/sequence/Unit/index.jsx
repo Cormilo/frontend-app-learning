@@ -49,11 +49,7 @@ const Unit = ({
         <UnitTitleSlot courseId={courseId} unitId={id} unitTitle={unit.title} />
       </div>
       <h2 className="sr-only">{formatMessage(messages.headerPlaceholder)}</h2>
-      <BookmarkButton
-        unitId={unit.id}
-        isBookmarked={unit.bookmarked}
-        isProcessing={isProcessing}
-      />
+      
       <UnitSuspense {...{ courseId, id }} />
       <ContentIFrame
         elementId="unit-iframe"
