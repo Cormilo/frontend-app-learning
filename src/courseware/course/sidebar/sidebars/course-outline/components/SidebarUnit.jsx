@@ -58,7 +58,7 @@ const SidebarUnit = ({
   const iconType = isLocked ? UNIT_ICON_TYPES.lock : icon;
 
   return (
-    <li className={classNames({ 'bg-info-100': isActive, 'border-top border-light': !isFirst })}>
+    <li className={classNames({ 'custom-background-color-list-active': isActive, 'border-top border-light': !isFirst })}>
       <Link
         to={`/course/${courseId}/${sequenceId}/${id}`}
         className="row w-100 m-0 d-flex align-items-center text-gray-700"
