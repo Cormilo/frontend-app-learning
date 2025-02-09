@@ -37,17 +37,21 @@ const CourseTabsNavigation = ({
                     ? `https://apps.pt.edtechlab.local/gradebook/${courseId}`
                     : url;
 
+                // Если slug === 'instructor', меняем название на "Gradebook"
+                const displayTitle = slug === 'instructor' ? 'Gradebook' : title;
+
                 return (
                   <a
                     key={slug}
                     className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
                     href={newUrl}
                   >
-                    {title}
+                    {displayTitle}
                   </a>
                 );
               })}
           </Tabs>
+
           </div>
           <div className="search-toggle">
             <CoursewareSearchToggle />
