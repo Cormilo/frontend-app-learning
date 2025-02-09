@@ -69,7 +69,7 @@ const LoadedTabPage = ({
         streakDiscountCouponEnabled={streakDiscountCouponEnabled}
         verifiedMode={verifiedMode}
       />
-      <main id="main-content" className="d-flex flex-column" style={{ minHeight: '80% !important' }}>
+      <main id="main-content" className="d-flex flex-column custom-class-body-size">
         <AlertList
           topic="outline"
           className="mx-5 mt-3"
