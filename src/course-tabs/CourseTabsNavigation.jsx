@@ -18,11 +18,12 @@ const CourseTabsNavigation = ({
       <div className="container-xl">
         <div className="nav-bar">
           <div className="nav-menu">
-
+            
             <Tabs
               className="nav-underline-tabs"
               aria-label={intl.formatMessage(messages.courseMaterial)}
             >
+              
               {tabs
                 .filter(({ slug }) => slug !== 'dates')
                 .map(({ url, title, slug }) => (
@@ -31,8 +32,10 @@ const CourseTabsNavigation = ({
                   className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
                   href={url}
                 >
-                  {title}
+                  {title} - {slug}
+                  
                 </a>
+                
               ))}
             </Tabs>
           </div>
