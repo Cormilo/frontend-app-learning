@@ -8,9 +8,6 @@ import Tabs from '../generic/tabs/Tabs';
 import { CoursewareSearch, CoursewareSearchToggle } from '../course-home/courseware-search';
 import { useCoursewareSearchState } from '../course-home/courseware-search/hooks';
 
-const {
-  title,
-} = useModel('courseHomeMeta', courseId);
 
 const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
