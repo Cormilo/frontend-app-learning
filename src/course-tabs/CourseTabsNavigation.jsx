@@ -23,25 +23,30 @@ const CourseTabsNavigation = ({
         <div className="nav-bar">
           <div className="nav-menu">
             
-          <Tabs className="nav-underline-tabs" aria-label={intl.formatMessage(messages.courseMaterial)}>
+          <Tabs
+            className="nav-underline-tabs"
+            aria-label={intl.formatMessage(messages.courseMaterial)}
+          >
             {tabs
               .filter(({ slug }) => slug !== 'dates')
               .map(({ url, title, slug }) => {
-                let modifiedSlug = slug;
-                let modifiedTitle = title;
+                // Извлекаем идентификатор курса из текущего URL
+                const match = window.location.pathname.match(/course-v1:[^/]+/);
+                const courseId = match ? match[0] : '';
 
-                if (slug === 'instructor') {
-                  modifiedSlug = 'gradebook';
-                  modifiedTitle = `Gradebook - ${title}`; // Добавляем название курса
-                }
+                // Формируем новый URL для instructor
+                const newUrl =
+                  slug === 'instructor'
+                    ? `https://apps.pt.edtechlab.local/gradebook/${courseId}`
+                    : url;
 
                 return (
                   <a
-                    key={modifiedSlug}
-                    className={classNames('nav-item flex-shrink-0 nav-link', { active: modifiedSlug === activeTabSlug })}
-                    href={url}
+                    key={slug}
+                    className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
+                    href={newUrl}
                   >
-                    {modifiedTitle}
+                    {title}
                   </a>
                 );
               })}
