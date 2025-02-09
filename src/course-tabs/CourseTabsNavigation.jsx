@@ -8,6 +8,10 @@ import Tabs from '../generic/tabs/Tabs';
 import { CoursewareSearch, CoursewareSearchToggle } from '../course-home/courseware-search';
 import { useCoursewareSearchState } from '../course-home/courseware-search/hooks';
 
+const {
+  title,
+} = useModel('courseHomeMeta', courseId);
+
 const CourseTabsNavigation = ({
   activeTabSlug, className, tabs, intl,
 }) => {
@@ -19,25 +23,29 @@ const CourseTabsNavigation = ({
         <div className="nav-bar">
           <div className="nav-menu">
             
-            <Tabs
-              className="nav-underline-tabs"
-              aria-label={intl.formatMessage(messages.courseMaterial)}
-            >
-              
-              {tabs
-                .filter(({ slug }) => slug !== 'dates')
-                .map(({ url, title, slug }) => (
-                <a
-                  key={slug}
-                  className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
-                  href={url}
-                >
-                  {title} - {slug}
-                  
-                </a>
-                
-              ))}
-            </Tabs>
+          <Tabs className="nav-underline-tabs" aria-label={intl.formatMessage(messages.courseMaterial)}>
+            {tabs
+              .filter(({ slug }) => slug !== 'dates')
+              .map(({ url, title, slug }) => {
+                let modifiedSlug = slug;
+                let modifiedTitle = title;
+
+                if (slug === 'instructor') {
+                  modifiedSlug = 'gradebook';
+                  modifiedTitle = `Gradebook - ${title}`; // Добавляем название курса
+                }
+
+                return (
+                  <a
+                    key={modifiedSlug}
+                    className={classNames('nav-item flex-shrink-0 nav-link', { active: modifiedSlug === activeTabSlug })}
+                    href={url}
+                  >
+                    {modifiedTitle}
+                  </a>
+                );
+              })}
+          </Tabs>
           </div>
           <div className="search-toggle">
             <CoursewareSearchToggle />
