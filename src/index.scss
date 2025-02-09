@@ -471,6 +471,10 @@
   background-color: #BCCBDD !important;
 }
 
+.custom-padding-class {
+  padding: 0px 5%;
+}
+
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";
