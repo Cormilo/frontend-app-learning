@@ -34,7 +34,7 @@ const CatalogSuggestion = ({ intl, variant }) => {
 
   return (
     <div className="row w-100 mx-0 my-2 justify-content-center" data-testid="catalog-suggestion">
-      <div className="col col-md-8 p-4 bg-info-100 text-center">
+      <div className="col col-md-8 p-4 bg-info-100 text-center custom-background-color-list-active">
         <FontAwesomeIcon icon={faSearch} style={{ width: '20px' }} />&nbsp;
         <FormattedMessage
           id="courseExit.catalogSearchSuggestion"

@@ -463,6 +463,14 @@
   background-color: #BCCBDD !important
 }
 
+.custom-head-color {
+  background-color: #D8E0EB !important;
+}
+
+.custom-background-color-list-active {
+  background-color: #BCCBDD !important;
+}
+
 // Import component-specific sass files
 @import "courseware/course/celebration/CelebrationModal.scss";
 @import "courseware/course/sidebar/sidebars/discussions/Discussions.scss";
