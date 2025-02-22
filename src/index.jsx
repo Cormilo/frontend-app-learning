@@ -36,6 +36,8 @@ import DecodePageRoute from './decode-page-route';
 import { DECODE_ROUTES, ROUTES } from './constants';
 import PreferencesUnsubscribe from './preferences-unsubscribe';
 
+document.cookie = "openedx-language-preference=en; path=/; max-age=31536000; domain=.pt.edtechlab.local; SameSite=None; Secure";
+
 subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider store={initializeStore()}>
